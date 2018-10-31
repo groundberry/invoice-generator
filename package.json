@@ -15,10 +15,19 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "watch": "react-scripts test --coverage --watch",
+    "test": "react-scripts test --coverage",
     "eject": "react-scripts eject"
   },
   "jest": {
+    "coverageThreshold": {
+      "src/components/**": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    },
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
     ]
