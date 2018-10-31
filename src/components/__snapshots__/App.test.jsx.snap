@@ -1,0 +1,139 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App renders 1`] = `
+<div
+  className="App"
+>
+  <header
+    className="App-header"
+  >
+    <h1>
+      Invoice generator
+    </h1>
+  </header>
+  <div>
+    <h2>
+      From
+    </h2>
+    <DetailsForm
+      onChange={[Function]}
+      value={
+        Object {
+          "address": "",
+          "email": "",
+          "name": "",
+          "phone": "",
+        }
+      }
+    />
+  </div>
+  <div>
+    <h2>
+      To
+    </h2>
+    <DetailsForm
+      onChange={[Function]}
+      value={
+        Object {
+          "address": "",
+          "email": "",
+          "name": "",
+          "phone": "",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`App when invoice from changes renders with the new from 1`] = `
+<div
+  className="App"
+>
+  <header
+    className="App-header"
+  >
+    <h1>
+      Invoice generator
+    </h1>
+  </header>
+  <div>
+    <h2>
+      From
+    </h2>
+    <DetailsForm
+      onChange={[Function]}
+      value={
+        Object {
+          "address": "1st Ave",
+          "email": "john@doe.com",
+          "name": "John",
+          "phone": "555 666 7777",
+        }
+      }
+    />
+  </div>
+  <div>
+    <h2>
+      To
+    </h2>
+    <DetailsForm
+      onChange={[Function]}
+      value={
+        Object {
+          "address": "",
+          "email": "",
+          "name": "",
+          "phone": "",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`App when invoice to changes renders with the new to 1`] = `
+<div
+  className="App"
+>
+  <header
+    className="App-header"
+  >
+    <h1>
+      Invoice generator
+    </h1>
+  </header>
+  <div>
+    <h2>
+      From
+    </h2>
+    <DetailsForm
+      onChange={[Function]}
+      value={
+        Object {
+          "address": "",
+          "email": "",
+          "name": "",
+          "phone": "",
+        }
+      }
+    />
+  </div>
+  <div>
+    <h2>
+      To
+    </h2>
+    <DetailsForm
+      onChange={[Function]}
+      value={
+        Object {
+          "address": "2nd Ave",
+          "email": "jane@doe.com",
+          "name": "Jane",
+          "phone": "555 666 8888",
+        }
+      }
+    />
+  </div>
+</div>
+`;
