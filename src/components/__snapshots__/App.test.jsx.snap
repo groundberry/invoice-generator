@@ -23,6 +23,22 @@ exports[`App renders 1`] = `
         zipCode=""
       />
     </div>
+    <div
+      className="App-form-info-to"
+    >
+      <h2>
+        To
+      </h2>
+      <WithStyles(DetailsForm)
+        city=""
+        email=""
+        name=""
+        onChange={[Function]}
+        phone=""
+        street=""
+        zipCode=""
+      />
+    </div>
   </div>
 </div>
 `;
@@ -50,6 +66,22 @@ exports[`App when invoice from changes renders with the new from 1`] = `
         zipCode="09112"
       />
     </div>
+    <div
+      className="App-form-info-to"
+    >
+      <h2>
+        To
+      </h2>
+      <WithStyles(DetailsForm)
+        city=""
+        email=""
+        name=""
+        onChange={[Function]}
+        phone=""
+        street=""
+        zipCode=""
+      />
+    </div>
   </div>
 </div>
 `;
@@ -75,6 +107,22 @@ exports[`App when invoice to changes renders with the new to 1`] = `
         phone=""
         street=""
         zipCode=""
+      />
+    </div>
+    <div
+      className="App-form-info-to"
+    >
+      <h2>
+        To
+      </h2>
+      <WithStyles(DetailsForm)
+        city="Seattle"
+        email="jane@doe.com"
+        name="Jane"
+        onChange={[Function]}
+        phone="555 666 8888"
+        street="2nd Ave"
+        zipCode="09112"
       />
     </div>
   </div>

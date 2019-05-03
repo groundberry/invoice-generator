@@ -14,12 +14,20 @@ class App extends React.Component {
         city: "",
         zipCode: "",
         phone: ""
+      },
+      to: {
+        name: "",
+        email: "",
+        street: "",
+        city: "",
+        zipCode: "",
+        phone: ""
       }
     };
   }
 
   render() {
-    const { from } = this.state;
+    const { from, to } = this.state;
 
     return (
       <div className="App">
@@ -36,6 +44,18 @@ class App extends React.Component {
               onChange={this.handleChangeFrom}
             />
           </div>
+          <div className="App-form-info-to">
+            <h2>To</h2>
+            <DetailsForm
+              email={to.email}
+              street={to.street}
+              city={to.city}
+              name={to.name}
+              zipCode={to.zipCode}
+              phone={to.phone}
+              onChange={this.handleChangeTo}
+            />
+          </div>
         </div>
       </div>
     );
@@ -45,6 +65,15 @@ class App extends React.Component {
     this.setState(prevState => ({
       from: {
         ...prevState.from,
+        ...newAttribute
+      }
+    }));
+  };
+
+  handleChangeTo = newAttribute => {
+    this.setState(prevState => ({
+      to: {
+        ...prevState.to,
         ...newAttribute
       }
     }));

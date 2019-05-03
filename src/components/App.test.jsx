@@ -36,7 +36,7 @@ describe("App", () => {
     });
   });
 
-  xdescribe("when invoice to changes", () => {
+  describe("when invoice to changes", () => {
     beforeEach(() => {
       const data = {
         name: "Jane",
