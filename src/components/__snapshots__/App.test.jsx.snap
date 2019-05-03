@@ -4,44 +4,25 @@ exports[`App renders 1`] = `
 <div
   className="App"
 >
-  <header
-    className="App-header"
+  <div
+    className="App-form"
   >
-    <h1>
-      Invoice generator
-    </h1>
-  </header>
-  <div>
-    <h2>
-      From
-    </h2>
-    <DetailsForm
-      onChange={[Function]}
-      value={
-        Object {
-          "address": "",
-          "email": "",
-          "name": "",
-          "phone": "",
-        }
-      }
-    />
-  </div>
-  <div>
-    <h2>
-      To
-    </h2>
-    <DetailsForm
-      onChange={[Function]}
-      value={
-        Object {
-          "address": "",
-          "email": "",
-          "name": "",
-          "phone": "",
-        }
-      }
-    />
+    <div
+      className="App-form-info-from"
+    >
+      <h2>
+        From
+      </h2>
+      <WithStyles(DetailsForm)
+        city=""
+        email=""
+        name=""
+        onChange={[Function]}
+        phone=""
+        street=""
+        zipCode=""
+      />
+    </div>
   </div>
 </div>
 `;
@@ -50,44 +31,25 @@ exports[`App when invoice from changes renders with the new from 1`] = `
 <div
   className="App"
 >
-  <header
-    className="App-header"
+  <div
+    className="App-form"
   >
-    <h1>
-      Invoice generator
-    </h1>
-  </header>
-  <div>
-    <h2>
-      From
-    </h2>
-    <DetailsForm
-      onChange={[Function]}
-      value={
-        Object {
-          "address": "1st Ave",
-          "email": "john@doe.com",
-          "name": "John",
-          "phone": "555 666 7777",
-        }
-      }
-    />
-  </div>
-  <div>
-    <h2>
-      To
-    </h2>
-    <DetailsForm
-      onChange={[Function]}
-      value={
-        Object {
-          "address": "",
-          "email": "",
-          "name": "",
-          "phone": "",
-        }
-      }
-    />
+    <div
+      className="App-form-info-from"
+    >
+      <h2>
+        From
+      </h2>
+      <WithStyles(DetailsForm)
+        city="Seattle"
+        email="john@doe.com"
+        name="John"
+        onChange={[Function]}
+        phone="555 666 7777"
+        street="1st Ave"
+        zipCode="09112"
+      />
+    </div>
   </div>
 </div>
 `;
@@ -96,44 +58,25 @@ exports[`App when invoice to changes renders with the new to 1`] = `
 <div
   className="App"
 >
-  <header
-    className="App-header"
+  <div
+    className="App-form"
   >
-    <h1>
-      Invoice generator
-    </h1>
-  </header>
-  <div>
-    <h2>
-      From
-    </h2>
-    <DetailsForm
-      onChange={[Function]}
-      value={
-        Object {
-          "address": "",
-          "email": "",
-          "name": "",
-          "phone": "",
-        }
-      }
-    />
-  </div>
-  <div>
-    <h2>
-      To
-    </h2>
-    <DetailsForm
-      onChange={[Function]}
-      value={
-        Object {
-          "address": "2nd Ave",
-          "email": "jane@doe.com",
-          "name": "Jane",
-          "phone": "555 666 8888",
-        }
-      }
-    />
+    <div
+      className="App-form-info-from"
+    >
+      <h2>
+        From
+      </h2>
+      <WithStyles(DetailsForm)
+        city=""
+        email=""
+        name=""
+        onChange={[Function]}
+        phone=""
+        street=""
+        zipCode=""
+      />
+    </div>
   </div>
 </div>
 `;

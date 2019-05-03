@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DetailsForm renders 1`] = `
+<form>
+  <TextField
+    className="DetailsForm-textField-1"
+    label="Name"
+    margin="normal"
+    name="name"
+    onChange={[Function]}
+    required={false}
+    select={false}
+    value="John"
+    variant="outlined"
+  />
+  <TextField
+    autoComplete="email"
+    className="DetailsForm-textField-1"
+    label="Email"
+    margin="normal"
+    name="email"
+    onChange={[Function]}
+    required={false}
+    select={false}
+    type="email"
+    value="john@doe.com"
+    variant="outlined"
+  />
+  <TextField
+    className="DetailsForm-textField-1"
+    label="Street"
+    margin="normal"
+    name="street"
+    onChange={[Function]}
+    required={false}
+    select={false}
+    value="NE 8th St"
+    variant="outlined"
+  />
+  <TextField
+    className="DetailsForm-textField-1"
+    label="City"
+    margin="normal"
+    name="city"
+    onChange={[Function]}
+    required={false}
+    select={false}
+    value="Bellevue"
+    variant="outlined"
+  />
+  <TextField
+    className="DetailsForm-textField-1"
+    label="Zip code"
+    margin="normal"
+    name="zipCode"
+    onChange={[Function]}
+    required={false}
+    select={false}
+    value="98004"
+    variant="outlined"
+  />
+  <TextField
+    className="DetailsForm-textField-1"
+    label="Phone"
+    margin="normal"
+    name="phone"
+    onChange={[Function]}
+    required={false}
+    select={false}
+    value="555 666 7777"
+    variant="outlined"
+  />
+</form>
+`;

@@ -1,83 +1,97 @@
-import React, { Component } from "react";
-import "./DetailsForm.css";
+import React from "react";
+import PropTypes from "prop-types";
+import { withStyles } from "@material-ui/core/styles";
+import TextField from "@material-ui/core/TextField";
 
-class DetailsForm extends Component {
+const styles = theme => ({
+  textField: {
+    display: "flex"
+  }
+});
+
+class DetailsForm extends React.Component {
   render() {
-    const { value } = this.props;
-    const { name, email, address, phone } = value;
+    const { classes, name, email, street, city, zipCode, phone } = this.props;
 
     return (
-      <form className="DetailsForm">
-        <label>
-          Name:
-          <input
-            type="text"
-            name="name"
-            value={name}
-            onChange={this.handleChangeName}
-          />
-        </label>
-        <label>
-          Email:
-          <input
-            type="email"
-            name="email"
-            value={email}
-            onChange={this.handleChangeEmail}
-          />
-        </label>
-        <label>
-          Address:
-          <input
-            type="text"
-            name="address"
-            value={address}
-            onChange={this.handleChangeAddress}
-          />
-        </label>
-        <label>
-          Phone number:
-          <input
-            type="tel"
-            name="phone"
-            value={phone}
-            onChange={this.handleChangePhone}
-          />
-        </label>
+      <form>
+        <TextField
+          label="Name"
+          className={classes.textField}
+          name="name"
+          value={name}
+          onChange={this.handleChange}
+          margin="normal"
+          variant="outlined"
+        />
+        <TextField
+          label="Email"
+          className={classes.textField}
+          name="email"
+          value={email}
+          onChange={this.handleChange}
+          type="email"
+          autoComplete="email"
+          margin="normal"
+          variant="outlined"
+        />
+        <TextField
+          label="Street"
+          className={classes.textField}
+          name="street"
+          value={street}
+          onChange={this.handleChange}
+          margin="normal"
+          variant="outlined"
+        />
+        <TextField
+          label="City"
+          className={classes.textField}
+          name="city"
+          value={city}
+          onChange={this.handleChange}
+          margin="normal"
+          variant="outlined"
+        />
+        <TextField
+          label="Zip code"
+          className={classes.textField}
+          name="zipCode"
+          value={zipCode}
+          onChange={this.handleChange}
+          margin="normal"
+          variant="outlined"
+        />
+        <TextField
+          label="Phone"
+          className={classes.textField}
+          name="phone"
+          value={phone}
+          onChange={this.handleChange}
+          margin="normal"
+          variant="outlined"
+        />
       </form>
     );
   }
-  handleChangeName = evt => {
-    const { value } = this.props;
-    this.props.onChange({
-      ...value,
-      name: evt.target.value
-    });
-  };
 
-  handleChangeEmail = evt => {
-    const { value } = this.props;
+  handleChange = evt => {
+    const { name, value } = evt.target;
     this.props.onChange({
-      ...value,
-      email: evt.target.value
-    });
-  };
-
-  handleChangeAddress = evt => {
-    const { value } = this.props;
-    this.props.onChange({
-      ...value,
-      address: evt.target.value
-    });
-  };
-
-  handleChangePhone = evt => {
-    const { value } = this.props;
-    this.props.onChange({
-      ...value,
-      phone: evt.target.value
+      [name]: value
     });
   };
 }
 
-export default DetailsForm;
+DetailsForm.propTypes = {
+  classes: PropTypes.object.isRequired,
+  name: PropTypes.string,
+  email: PropTypes.string,
+  street: PropTypes.string,
+  city: PropTypes.string,
+  zipCode: PropTypes.string,
+  phone: PropTypes.string,
+  onChange: PropTypes.func
+};
+
+export default withStyles(styles)(DetailsForm);
