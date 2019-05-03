@@ -1,5 +1,6 @@
 import React from "react";
 import DetailsForm from "./DetailsForm";
+import FormInvoiceInfo from "./FormInvoiceInfo";
 import "./App.css";
 
 class App extends React.Component {
@@ -22,12 +23,18 @@ class App extends React.Component {
         city: "",
         zipCode: "",
         phone: ""
+      },
+      invoiceInfo: {
+        number: "",
+        emitDate: "",
+        terms: "",
+        dueDate: ""
       }
     };
   }
 
   render() {
-    const { from, to } = this.state;
+    const { from, to, invoiceInfo } = this.state;
 
     return (
       <div className="App">
@@ -56,6 +63,16 @@ class App extends React.Component {
               onChange={this.handleChangeTo}
             />
           </div>
+          <div className="App-invoice-info">
+            <h2>Invoice information</h2>
+            <FormInvoiceInfo
+              number={invoiceInfo.number}
+              emitDate={invoiceInfo.emitDate}
+              terms={invoiceInfo.terms}
+              dueDate={invoiceInfo.dueDate}
+              onChange={this.handleChangeInvoiceInfo}
+            />
+          </div>
         </div>
       </div>
     );
@@ -74,6 +91,15 @@ class App extends React.Component {
     this.setState(prevState => ({
       to: {
         ...prevState.to,
+        ...newAttribute
+      }
+    }));
+  };
+
+  handleChangeInvoiceInfo = newAttribute => {
+    this.setState(prevState => ({
+      invoiceInfo: {
+        ...prevState.invoiceInfo,
         ...newAttribute
       }
     }));

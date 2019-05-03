@@ -2,6 +2,7 @@ import React from "react";
 import { shallow } from "enzyme";
 import App from "./App";
 import DetailsForm from "./DetailsForm";
+import FormInvoiceInfo from "./FormInvoiceInfo";
 
 describe("App", () => {
   let wrapper;
@@ -54,6 +55,26 @@ describe("App", () => {
     });
 
     it("renders with the new to", () => {
+      expect(wrapper).toMatchSnapshot();
+    });
+  });
+
+  describe("when invoice information changes", () => {
+    beforeEach(() => {
+      const data = {
+        number: "0001",
+        emitDate: "04/10/2019",
+        terms: "30 Days",
+        dueDate: "05/10/2019"
+      };
+
+      wrapper
+        .find(FormInvoiceInfo)
+        .at(0)
+        .simulate("change", data);
+    });
+
+    it("renders with the new information", () => {
       expect(wrapper).toMatchSnapshot();
     });
   });

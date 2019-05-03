@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormInvoiceInfo renders 1`] = `
+<form
+  autoComplete="off"
+  noValidate={true}
+>
+  <TextField
+    className="FormInvoiceInfo-textField-1"
+    label="Invoice Number"
+    margin="normal"
+    name="number"
+    onChange={[Function]}
+    required={false}
+    select={false}
+    type="number"
+    value="0001"
+    variant="outlined"
+  />
+  <TextField
+    InputLabelProps={
+      Object {
+        "shrink": true,
+      }
+    }
+    className="FormInvoiceInfo-textField-1"
+    label="Date"
+    margin="normal"
+    name="emitDate"
+    onChange={[Function]}
+    required={false}
+    select={false}
+    type="date"
+    value="04/10/2019"
+    variant="outlined"
+  />
+  <TextField
+    className="FormInvoiceInfo-textField-1"
+    label="Terms"
+    margin="normal"
+    name="terms"
+    onChange={[Function]}
+    required={false}
+    select={false}
+    value="30 Days"
+    variant="outlined"
+  />
+  <TextField
+    InputLabelProps={
+      Object {
+        "shrink": true,
+      }
+    }
+    className="FormInvoiceInfo-textField-1"
+    label="Due"
+    margin="normal"
+    name="dueDate"
+    onChange={[Function]}
+    required={false}
+    select={false}
+    type="date"
+    value="05/10/2019"
+    variant="outlined"
+  />
+</form>
+`;
